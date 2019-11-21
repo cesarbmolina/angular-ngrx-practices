@@ -4,10 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-// ngrx
-import { StoreModule } from '@ngrx/store';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { EffectsModule } from '@ngrx/effects';
 import { HomeComponent } from './pages/home/home.component';
 import { AppsComponent } from './pages/apps/apps.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
@@ -16,6 +12,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // ANGULAR MATERIAL
 import { MaterialModule } from './material.module';
 
+// Store
+import { AppStoreModule } from './store/app-store.module';
+
 
 
 @NgModule({
@@ -23,16 +22,14 @@ import { MaterialModule } from './material.module';
     AppComponent,
     HomeComponent,
     AppsComponent,
-    DashboardComponent
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    EffectsModule.forRoot([]),
-    StoreModule.forRoot({}),
-    StoreDevtoolsModule.instrument(),
     BrowserAnimationsModule,
     MaterialModule,
+    AppStoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
