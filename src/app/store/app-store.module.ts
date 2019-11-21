@@ -4,7 +4,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
 
 // REDUCERS
-
+import { userReducer } from './users/users.reducer';
 
 // EFFECTS
 
@@ -13,6 +13,7 @@ import { EffectsModule } from '@ngrx/effects';
     EffectsModule.forRoot([
     ]),
     StoreModule.forRoot({
+        user: userReducer
     }),
     StoreDevtoolsModule.instrument()
   ]

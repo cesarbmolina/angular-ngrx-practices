@@ -10,7 +10,7 @@ export const initialState: UsersInterface = {
   fill: false
 };
 
-export function reducer(state = initialState, action: UserActions): UsersInterface {
+export function userReducer(state = initialState, action: UserActions): UsersInterface {
   switch (action.type) {
     case UserActionTypes.LoadUsers:
       return { ...state, load: true, fill: false };
