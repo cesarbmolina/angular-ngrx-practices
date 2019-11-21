@@ -8,12 +8,18 @@ import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
+import { HomeComponent } from './pages/home/home.component';
+import { AppsComponent } from './pages/apps/apps.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    AppsComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
