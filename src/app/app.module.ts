@@ -11,6 +11,10 @@ import { EffectsModule } from '@ngrx/effects';
 import { HomeComponent } from './pages/home/home.component';
 import { AppsComponent } from './pages/apps/apps.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+// ANGULAR MATERIAL
+import { MaterialModule } from './material.module';
 
 
 
@@ -26,7 +30,9 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     AppRoutingModule,
     EffectsModule.forRoot([]),
     StoreModule.forRoot({}),
-    StoreDevtoolsModule.instrument()
+    StoreDevtoolsModule.instrument(),
+    BrowserAnimationsModule,
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

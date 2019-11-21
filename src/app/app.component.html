@@ -1,1 +1,16 @@
-<router-outlet></router-outlet>
+<mat-card>
+    <div class="d-flex justify-content-between align-items-center">
+        <div class="w-100">
+            <img src="https://ngrx.io/assets/images/badge.svg" alt="ngrx-logo" title="ngrx-logo" height="50">
+        </div>
+        <div class="">
+            <button mat-flat-button color="primary" class="mr-2" routerLink="home">HOME</button>
+            <button mat-flat-button color="primary" class="mr-2" routerLink="apps-new">APPS</button>
+            <button mat-flat-button color="primary" class="mr-2" routerLink="dashboard">DASHBOARD</button>
+        </div>
+    </div>
+
+</mat-card>
+<div class="container-fluid p3">
+    <router-outlet></router-outlet>
+</div>

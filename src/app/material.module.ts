@@ -1,0 +1,96 @@
+import { NgModule } from '@angular/core';
+
+import {
+  MatIconModule,
+  MatButtonModule,
+  MatSelectModule,
+  MatRippleModule,
+  MatTabsModule,
+  MatTooltipModule,
+  MatCheckboxModule,
+  MatTableModule,
+  MatExpansionModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatProgressSpinnerModule,
+  MatAutocompleteModule,
+  MatSnackBarModule,
+  MatDialogModule,
+  MatGridListModule,
+  MatPaginatorModule,
+  MatRadioModule,
+  MatStepperModule,
+  MatProgressBarModule,
+  MatMenuModule,
+  MatSortModule,
+  MatChipsModule,
+  MatCardModule,
+} from '@angular/material';
+// import { LayoutModule } from '@angular/cdk/layout';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { PortalModule } from '@angular/cdk/portal';
+
+@NgModule({
+  imports: [
+    MatIconModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatRippleModule,
+    MatTabsModule,
+    MatTooltipModule,
+    MatCheckboxModule,
+    MatTableModule,
+    MatExpansionModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatProgressSpinnerModule,
+    MatAutocompleteModule,
+    MatSnackBarModule,
+    MatDialogModule,
+    MatGridListModule,
+    MatPaginatorModule,
+    MatRadioModule,
+    MatStepperModule,
+    MatProgressBarModule,
+    MatMenuModule,
+    MatSortModule,
+    MatChipsModule,
+    OverlayModule,
+    PortalModule,
+    MatCardModule,
+  ],
+  declarations: [
+  ],
+  exports: [
+    MatIconModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatRippleModule,
+    MatTabsModule,
+    MatTooltipModule,
+    MatCheckboxModule,
+    MatTableModule,
+    MatExpansionModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatProgressSpinnerModule,
+    MatAutocompleteModule,
+    MatSnackBarModule,
+    MatDialogModule,
+    MatGridListModule,
+    MatPaginatorModule,
+    MatRadioModule,
+    MatStepperModule,
+    MatProgressBarModule,
+    MatMenuModule,
+    MatSortModule,
+    MatChipsModule,
+    OverlayModule,
+    PortalModule,
+    MatCardModule
+  ],
+  providers: [
+    // MdIconRegistry
+  ]
+})
+export class MaterialModule { }
