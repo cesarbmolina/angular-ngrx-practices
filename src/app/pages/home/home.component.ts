@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
-import { UsersInterface } from 'src/app/models/users/users.module';
+import { UsersInterface, UserInterface } from 'src/app/models/users/users.module';
 
 import { Store } from '@ngrx/store';
 import { AppState } from 'src/app/models/app-state.interface';
@@ -17,26 +17,25 @@ import { RepositoryService } from 'src/app/services/repository.service';
 export class HomeComponent implements OnInit {
 
   private users$: Subscription;
+  public user: UserInterface;
 
   constructor(private store: Store<AppState>, private repositoryService: RepositoryService) { }
 
   ngOnInit() {
     this.users$ = this.store.select('user').subscribe(d => {
-      console.log(d);
       if (!d.fill && !d.load) {
-        const action = new LoadUsers();
+        const action = new LoadUsers(2);
         this.store.dispatch(action);
       }
-    });
+      if (d && d.user) {
+        this.user = d.user;
 
-    this.getServiceUser();
-  }
+      }
 
-  private getServiceUser() {
-    this.repositoryService.getUsers(2).toPromise().then(users => {
-      console.log(users);
     });
   }
+
+
 
   onDestroy() {
     this.users$.unsubscribe();
