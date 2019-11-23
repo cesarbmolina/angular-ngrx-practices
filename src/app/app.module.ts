@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 
 import { HomeComponent } from './pages/home/home.component';
 import { AppsComponent } from './pages/apps/apps.component';
@@ -30,6 +31,7 @@ import { AppStoreModule } from './store/app-store.module';
     BrowserAnimationsModule,
     MaterialModule,
     AppStoreModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
